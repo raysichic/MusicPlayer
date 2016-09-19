@@ -1,4 +1,5 @@
 # 学习点
+ - [Android Vector曲折的兼容之路](http://www.jianshu.com/p/e3614e7abc03)
 
 
 # A Stylish Music Player
