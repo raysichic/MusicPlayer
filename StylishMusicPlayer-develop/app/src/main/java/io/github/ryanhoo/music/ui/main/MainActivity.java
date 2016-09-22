@@ -63,8 +63,8 @@ public class MainActivity extends BaseActivity {
         // Inflate ViewPager
         MainPagerAdapter adapter = new MainPagerAdapter(getSupportFragmentManager(), mTitles, fragments);
         viewPager.setAdapter(adapter);
-        viewPager.setOffscreenPageLimit(adapter.getCount() - 1);
-        viewPager.setPageMargin(getResources().getDimensionPixelSize(R.dimen.mp_margin_large));
+        viewPager.setOffscreenPageLimit(adapter.getCount() - 1);    // 预先加载的页面数
+        viewPager.setPageMargin(getResources().getDimensionPixelSize(R.dimen.mp_margin_large));// 用来达到一屏多页的效果。
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -87,6 +87,17 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void onBackPressed() {
+
+        /**
+         * false: 仅当activity为task根（即首个activity之类的）时才生效
+         *
+         * true: 忽略上面的限制
+         *
+         * 这个方法不会改变Task中的activity中的顺序，效果基本等同于home键
+         *
+         * 应用场景：
+         *      比如有些activity诸如引导图之类的，用户在按返回键的时候并不希望退出（默认 finish），而是希望置后台，就可以调用这个方法。
+         */
         moveTaskToBack(true);
     }
 
