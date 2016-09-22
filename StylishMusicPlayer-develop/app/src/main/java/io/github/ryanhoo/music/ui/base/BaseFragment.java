@@ -38,6 +38,7 @@ public abstract class BaseFragment extends Fragment {
         }
     }
 
+    // RxJava 观察者模式：订阅
     protected Subscription subscribeEvents() {
         return null;
     }

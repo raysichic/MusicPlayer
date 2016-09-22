@@ -32,6 +32,13 @@ public class MainActivity extends BaseActivity {
 
     String[] mTitles;
 
+    /**
+     * 开启该flag后，就可正常使用Selector这样的DrawableContainers了，
+     *
+     * 同时，你还开启了类似android:drawableLeft这样的compound drawable的使用权限，
+     * 以及RadioButton的使用权限，
+     * 以及ImageView’s src属性。
+     */
     static {
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
     }

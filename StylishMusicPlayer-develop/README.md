@@ -1,6 +1,16 @@
 # 学习点
  - [Android Vector曲折的兼容之路](http://www.jianshu.com/p/e3614e7abc03)
 
+ - [RxJava, RxAndroid详解](http://gank.io/post/560e15be2dca930e00da1083#toc_1)
+
+ - [Retrofit]()
+
+ - [Butter Knife]()
+
+ - [Calligraphy]()
+
+ - [LiteOrm]()
+
 
 # A Stylish Music Player
 
